@@ -35,11 +35,11 @@ export class AppComponent {
   // @ViewChild(ChildComponent, { static: true }) component!: ChildComponent;
 
   // VIEW CHILDREN
-  @ViewChildren('heading') heading!: QueryList<ElementRef<HTMLHeadingElement>>;
+  // @ViewChildren('heading') heading!: QueryList<ElementRef<HTMLHeadingElement>>;
 
-  @ViewChildren('template') template!: QueryList<TemplateRef<HTMLHeadingElement>>;
+  // @ViewChildren('template') template!: QueryList<TemplateRef<HTMLHeadingElement>>;
 
-  @ViewChildren(ChildComponent) component!: QueryList<ChildComponent>;
+  // @ViewChildren(ChildComponent) component!: QueryList<ChildComponent>;
 
   // @ViewChildren('heading, ChildComponent') component!: QueryList<ChildComponent>;
 
@@ -52,14 +52,17 @@ export class AppComponent {
 
   // ngAfterViewInit lifecycle hook usage
   //Called after ngAfterContentInit when the component's view has been initialized.
-  ngAfterViewInit(): void {
-    console.log('heading', this.heading);
-    console.log('template', this.template);
-    console.log('component', this.component);
+  // ngAfterViewInit(): void {
+    // console.log('heading', this.heading);
+    // console.log('template', this.template);
+    // console.log('component', this.component);
 
-    this.component.forEach((item) => console.log('item', item));
+    // this.component.forEach((item) => console.log('item', item));
     // NOT RECOMMENDED DO THAT!
     // this.heading.nativeElement.textContent = 'QWERTY';
     // this.component.name = 'Child name from parent';
-  }
+  // }
+
+  // CONTENT CHILD
+  
 }

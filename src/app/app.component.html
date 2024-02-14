@@ -1,9 +1,9 @@
-                            <!-- VIEW CHILD USAGE -->
+<!-- VIEW CHILD USAGE -->
 
 <!-- <h3 #heading>Example 1: Simple Heading</h3> -->
 
 <!-- <ng-template #template> -->
-  <!-- <h3>Example 2: Content inside ng-template</h3> -->
+<!-- <h3>Example 2: Content inside ng-template</h3> -->
 <!-- </ng-template> -->
 <!-- ng-template rendering using ng-container -->
 <!-- <ng-container *ngTemplateOutlet="template"></ng-container> -->
@@ -19,9 +19,9 @@
 <app-child #heading>Example 4: Content inside Child Component</app-child> -->
 
 <!-- ======================================================= -->
-                               <!-- VIEW CHILDREN USAGE -->
-                               
-<h3 #heading>Example 1: Simple Heading</h3>
+<!-- VIEW CHILDREN USAGE -->
+
+<!-- <h3 #heading>Example 1: Simple Heading</h3>
 
 <ng-template #template>
 <h3>Example 2: Content inside ng-template</h3>
@@ -31,8 +31,57 @@
 
 <app-child #component>Example 3: Content inside Child Component</app-child>
 
-<app-child>Example 3: Content inside Child Component</app-child>
+<app-child>Example 3: Content inside Child Component</app-child> -->
 
 <!-- example 4 -->
 <!-- <h3 #heading>Example 4: Simple Heading</h3>
 <app-child #heading>Example 4: Content inside Child Component</app-child> -->
+
+
+<!-- ============================================================= -->
+<!-- CONTENT CHILD -->
+<!-- <app-child>Simple Text</app-child>
+
+<app-child>
+  <h3 #tag>Simple text 2: Heading</h3>
+</app-child> -->
+
+<!-- <app-child>
+  <ng-template>
+    <h3>Simple text 3: Heading (Inside ng-template)</h3>
+  </ng-template>
+</app-child> -->
+<!--
+<app-child>
+  <app-ng-content-example>Simple text 4: Heading (Inside child and ng-content-example components)</app-ng-content-example>
+</app-child> -->
+
+<!-- example 4 -->
+<!-- <app-child>
+  <h3 #tag>Simple text 4: Heading</h3>
+</app-child>
+<app-child>
+  <ng-template #tag>
+    <h3>Simple text 5: Heading (Inside ng-template)</h3>
+  </ng-template>
+</app-child> -->
+
+<!-- example 5 DESCENDANTS-->
+<!-- <app-child>
+  <app-ng-content-example>Simple text 4: Heading (Inside child and ng-content-example components)
+    <app-ng-content-example #descendants>Simple text 4: Heading (Inside child and ng-content-example components)</app-ng-content-example>
+  </app-ng-content-example>
+</app-child> -->
+
+<!-- example 6 - nested structure -->
+<app-child>
+  <app-ng-content-example>
+    Simple text 4: Heading (Inside child and ng-content-example components)
+    <app-ng-content-example>
+      Simple text 4: Heading (Inside child and ng-content-example components)
+      <app-ng-content-example #descendants>
+        Simple text 4: Heading (Inside child and ng-content-example components)
+      </app-ng-content-example>
+    </app-ng-content-example>
+  </app-ng-content-example>
+</app-child>
